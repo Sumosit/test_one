@@ -25,6 +25,7 @@
     "@rxjs/rx": "^4.1.0",
     "@stomp/stompjs": "^6.1.2",
     "@types/sockjs-client": "^1.5.1",
+    "express": "^4.18.1",
     "lightweight-charts": "^3.8.0",
     "rxjs": "~7.5.0",
     "sockjs-client": "^1.6.0",
