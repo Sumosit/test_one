@@ -1,0 +1,23 @@
+.tabs {
+  padding: 30px 0;
+  display: flex;
+  flex-direction: row;
+  scroll-behavior: smooth;
+  //overflow-x: auto;
+
+  .tab-on {
+    flex: none;
+    cursor: pointer;
+    border-width: 0;
+    border-bottom-width: 2px;
+    padding: 10px 16px 8px;
+  }
+
+  .tab-off {
+    flex: none;
+    cursor: pointer;
+    border-width: 0;
+    border-bottom-width: 1px;
+    padding: 10px 24px 9px;
+  }
+}

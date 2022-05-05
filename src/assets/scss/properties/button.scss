@@ -1,0 +1,57 @@
+.pointer {
+  cursor: pointer;
+}
+
+.user-select-none {
+  user-select: none;
+}
+
+.modal-buttons {
+  padding: 30px 60px 30px;
+  display: flex;
+  flex-direction: row;
+  div {
+    flex: none;
+  }
+}
+
+[class|="button"] {
+}
+
+.button-p0_30 {
+  user-select: none;
+  cursor: pointer;
+  width: fit-content;
+  height: 40px;
+  padding: 0 30px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.button-h28-p0_12 {
+  user-select: none;
+  cursor: pointer;
+  width: fit-content;
+  height: 28px;
+  padding: 0 20px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.button-g12-p0_16 {
+  user-select: none;
+  cursor: pointer;
+  width: fit-content;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+

@@ -1,0 +1,12 @@
+<div id="indexes2" style="width: 100%; flex: none"></div>
+<main>
+  <app-path-tree [pathTree]="toolService.pathTree"></app-path-tree>
+  <app-paper-short-info [code]="paramCode"></app-paper-short-info>
+</main>
+<app-tabs [tabs]="toolService.tabs"
+          (currentTab)="getEmitCurrentTab($event)"
+></app-tabs>
+<app-tool-bidding *ngIf="toolService.currentTab.link === 'bidding'"
+                  [code]="paramCode"></app-tool-bidding>
+<app-tool-specifications *ngIf="toolService.currentTab.link === 'specifications'"
+                         [code]="paramCode"></app-tool-specifications>

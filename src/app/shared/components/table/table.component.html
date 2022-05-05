@@ -1,0 +1,27 @@
+<div class="table-body box-shadow_1">
+  <table class="table-zebra">
+    <thead class="font-300 font-12_20">
+    <tr>
+      <th *ngFor="let col of columns; index as i"
+          class="{{col.name}}"
+          [ngStyle]="{
+          'text-align': columnsSettings[i]?.textAlign,
+          'width': columnsSettings[i]?.width
+          }"
+      >{{col.name}}</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let value of values; index as i">
+      <td *ngFor="let field of getNumberOfProperties(value); index as j"
+          [ngStyle]="{
+          'text-align': valuesSettings[j]?.textAlign,
+          'width': valuesSettings[j]?.width
+          }"
+      >
+        {{value[columns[j].field]}}
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

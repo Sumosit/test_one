@@ -1,0 +1,97 @@
+<div class="paper-info">
+  <span class="pi-header font-700 font-28_40 font-main_2">Характеристика ценной бумаги</span>
+  <div class="pi-condition" *ngIf="data">
+    <div class="pic-column">
+      <div class="pic-item">
+        <span class="font-300 font-16_24 font-main-3">Эмитент:</span>
+        <span class="font-300 font-16_24 font-main-2">{{data.emvFullNameRu}}</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-16_24 font-main-3">Торговый код:</span>
+        <span class="font-300 font-16_24 font-main-2">{{data?.tCode}}</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-16_24 font-main-3">ISIN:</span>
+        <span class="font-300 font-16_24 font-main-2">{{data.tNin}}</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-16_24 font-main-3">Маркет-мейкеры:</span>
+        <span class="font-300 font-16_24 font-main-2">{{data?.mmOrgNameRus}}</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-16_24 font-main-3">Тип акции:</span>
+        <span class="font-300 font-16_24 font-main-2">{{data?.tTypeSecRu}}</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-16_24 font-main-3">CFI:</span>
+        <span class="font-300 font-16_24 font-main-2">{{data?.cFi}}</span>
+      </div>
+    </div>
+    <div class="pic-column">
+      <div class="pic-item">
+        <span class="font-300 font-16_24 font-main-3">Список ценных бумаг:</span>
+        <span class="font-300 font-16_24 font-main-2">{{data.tSecuritiesListRu}}</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-16_24 font-main-3">Точность котирования:</span>
+        <span class="font-300 font-16_24 font-main-2">{{data?.priceAccuracy}}</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-16_24 font-main-3">Схема расчетов:</span>
+        <span class="font-300 font-16_24 font-main-2">AO Kaspi.kz</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-16_24 font-main-3">BBGID</span>
+        <span class="font-300 font-16_24 font-main-2">AO Kaspi.kz</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-16_24 font-main-3">Регистратор:</span>
+        <span class="font-300 font-16_24 font-main-2">АО "Центральный депозитарий ценных бумаг" (Алматы)</span>
+      </div>
+    </div>
+    <div class="pic-column">
+      <div class="pic-item">
+        <span class="font-300 font-16_24 font-main-3">T+2</span>
+        <span class="font-300 font-16_24 font-main-2">AO Kaspi.kz</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-16_24 font-main-3">Дата открытия торгов:</span>
+        <span class="font-300 font-16_24 font-main-2">{{data.tOpenTradeDate}}</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-16_24 font-main-3">Дата включения в торговые списки:</span>
+        <span class="font-300 font-16_24 font-main-2">{{data.tInclDate}}</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-16_24 font-main-3">Общее количество объявленных акций:</span>
+        <span class="font-300 font-16_24 font-main-2">{{data.emsCommonAnnouncedNum}}</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-16_24 font-main-3">Дивиденды:</span>
+        <span class="font-300 font-16_24 font-main-2">История выплат</span>
+      </div>
+    </div>
+    <div class="pic-column">
+      <div class="pic-item">
+        <span class="font-300 font-16_24 font-main-3">Количество акций в обращении:</span>
+        <span class="font-300 font-16_24 font-main-2">{{data.emsCommonPaidUpNum}}</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-16_24 font-main-3">Валюта котирования:</span>
+        <span class="font-300 font-16_24 font-main-2">{{data?.currEmission}}</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-16_24 font-main-3">Валюта выпуска:</span>
+        <span class="font-300 font-16_24 font-main-2"></span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-16_24 font-main-3">Номинальная стоимость:</span>
+        <span class="font-300 font-16_24 font-main-2">{{data?.nominal}}</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-16_24 font-main-3">Периодичность выплаты дивиденда:</span>
+        <span class="font-300 font-16_24 font-main-2">{{data?.instrChangeDate}}</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+.prospectus {
+  padding: 30px 0;
+
+  .ps-dates {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .ps-arrow-bg {
+    user-select: none;
+    flex: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(30, 33, 43, 0.05);
+  }
+
+  .ps-arrow-right {
+    margin-left: 24px;
+  }
+
+  .ps-arrow-left {
+    margin-right: 24px;
+  }
+}

@@ -1,0 +1,24 @@
+<div class="table-news">
+  <div>
+    <span class="font-700 font-28_40 font-main_2">Новости</span>
+  </div>
+  <table>
+    <tbody>
+    <tr *ngFor="let value of values; index as i">
+      <td class="font-300 font-16_24 font-main-3">
+        {{value.dateOrPeriod}}
+      </td>
+      <td class="font-300 font-16_24 font-main_2 font-underline">
+        {{value.title}}
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="header-mt_30 row-cr">
+    <span class="font-500 font-14_24 font-main_2">Все новости</span>
+    <app-svg-icon class="svg-main_3"
+                  [width]="'20'" [height]="'20'"
+                  [iconName]="'arrow_right-light'">
+    </app-svg-icon>
+  </div>
+</div>

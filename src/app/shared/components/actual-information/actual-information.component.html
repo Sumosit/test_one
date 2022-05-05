@@ -1,0 +1,19 @@
+<div class="actual-information">
+  <span class="font-700 font-28_40 font-main_2">Актуальная информация</span>
+  <div class="ai-cards">
+    <div class="ai-card" *ngFor="let card of cards"
+         [ngStyle]="{'background-image': card.imageUrl + ''}"
+    >
+      <span class="ai-type font-300 font-12_16 font-uppercase bg-main-5_30per font-main-5">{{card.type}}</span>
+      <span class="ai-header font-700 font-16_20 font-main-5">{{card.title}}</span>
+      <div class="ai-more font-500 font-14_24 pointer"
+           [routerLink]="card.link">
+        <span class="font-500 font-14_20 font-main-5">Подробнее</span>
+        <app-svg-icon [width]="'20'" [height]="'20'"
+                      class="svgs-main_5"
+                      [iconName]="'arrow_right-light'">
+        </app-svg-icon>
+      </div>
+    </div>
+  </div>
+</div>

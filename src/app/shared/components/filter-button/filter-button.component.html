@@ -1,0 +1,92 @@
+<div id="button1" (click)="modalOn()"
+     class="modal-filter-button button-g12-p0_16 primary-button">
+  <app-svg-icon [width]="'20'" [height]="'20'"
+                [iconName]="'filter-icon'">
+  </app-svg-icon>
+  <span>Фильтры</span>
+</div>
+<div [ngStyle]="{
+  top: y+'px',
+  left: x+'px'
+}"
+     *ngIf="show"
+     class="modal modal-filter bg-main_5 border-main_1 modal-drop_shadow">
+  <div class="mf-header">
+    <div class="font-300-italic font-12_20">
+      <span class="font-main_2">Вы выбрали&nbsp;</span>
+      <span class="font-main_1">900&nbsp;</span>
+      <span class="font-main_2">инструментов,&nbsp;</span>
+      <span class="font-main_1">180&nbsp;</span>
+      <span class="font-main_2">эмитентов&nbsp;</span>
+    </div>
+    <div class="font-300 font-12_20 row-c gap-8 margin-left-auto">
+      <span class="font-main_1 user-select-none pointer" (click)="chooseAll()">Выбрать все</span>
+      <span class="font-sec_5">/</span>
+      <span class="font-sec_2 user-select-none pointer" (click)="clearAll()">Очистить все</span>
+    </div>
+  </div>
+  <div class="mf-checkboxes">
+    <div class="mfc-left">
+      <span class="mfc-header font-700 font-16_24 font-main_2">{{mainSite.header}}</span>
+      <div class="font-300 font-14_22 font-main_2" *ngFor="let type of mainSite.types">
+        <div class="mfc-header_type"><span class="font-16_24">{{type.header}}</span></div>
+        <div class="mf-checkbox" *ngFor="let category of type.categories" (click)="category.active = !category.active">
+          <img src="../../../../assets/images/const-svgs/checkbox/checkbox-on.svg" *ngIf="category.active" alt="">
+          <img src="../../../../assets/images/const-svgs/checkbox/checkbox-off.svg" *ngIf="!category.active" alt="">
+          <span>{{category.header}}</span>
+        </div>
+      </div>
+      <span class="mfc-header font-700 font-16_24 font-main_2">{{alternativeSite.header}}</span>
+      <div class="font-300 font-14_22 font-main_2" *ngFor="let type of alternativeSite.types">
+        <div class="mfc-header_type"><span class="font-16_24">{{type.header}}</span></div>
+        <div class="mf-checkbox" *ngFor="let category of type.categories" (click)="category.active = !category.active">
+          <img src="../../../../assets/images/const-svgs/checkbox/checkbox-on.svg" *ngIf="category.active" alt="">
+          <img src="../../../../assets/images/const-svgs/checkbox/checkbox-off.svg" *ngIf="!category.active" alt="">
+          <span>{{category.header}}</span>
+        </div>
+      </div>
+    </div>
+    <div class="mfc-right">
+      <span class="mfc-header font-700 font-16_24 font-main_2">{{otherInstruments.header}}</span>
+      <div class="font-300 font-14_22 font-main_2" *ngFor="let type of otherInstruments.types">
+        <div class="mfc-header_type"><span class="font-16_24">{{type.header}}</span></div>
+        <div class="mf-checkbox" *ngFor="let category of type.categories | slice:0:4"
+             (click)="category.active = !category.active">
+          <img src="../../../../assets/images/const-svgs/checkbox/checkbox-on.svg" *ngIf="category.active" alt="">
+          <img src="../../../../assets/images/const-svgs/checkbox/checkbox-off.svg" *ngIf="!category.active" alt="">
+          <span>{{category.header}}</span>
+        </div>
+      </div>
+      <div class="mf-line border-sec_5_80per"></div>
+      <div class="font-300 font-14_22 font-main_2" *ngFor="let type of otherInstruments.types">
+        <div class="mfc-header_type"><span class="font-16_24">{{type.header}}</span></div>
+        <div class="mf-checkbox" *ngFor="let category of type.categories | slice:4:7"
+             (click)="category.active = !category.active">
+          <img src="../../../../assets/images/const-svgs/checkbox/checkbox-on.svg" *ngIf="category.active" alt="">
+          <img src="../../../../assets/images/const-svgs/checkbox/checkbox-off.svg" *ngIf="!category.active" alt="">
+          <span>{{category.header}}</span>
+        </div>
+      </div>
+      <div class="mf-line border-sec_5_80per"></div>
+      <div class="font-300 font-14_22 font-main_2" *ngFor="let type of otherInstruments.types">
+        <div class="mfc-header_type"><span class="font-16_24">{{type.header}}</span></div>
+        <div class="mf-checkbox" *ngFor="let category of type.categories | slice:7:10"
+             (click)="category.active = !category.active">
+          <img src="../../../../assets/images/const-svgs/checkbox/checkbox-on.svg" *ngIf="category.active" alt="">
+          <img src="../../../../assets/images/const-svgs/checkbox/checkbox-off.svg" *ngIf="!category.active" alt="">
+          <span>{{category.header}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-buttons"
+       (click)="show = false">
+    <div class="button-p0_30 margin-left-auto"
+    >Отмена
+    </div>
+    <div class="button-p0_30 primary-button"
+         (click)="submit()">
+      <span>Применить</span>
+    </div>
+  </div>
+</div>

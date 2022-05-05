@@ -1,0 +1,15 @@
+<div class="header-menu-big bg-main_5" [ngStyle]="{
+  top: y+'px'
+}">
+  <div class="hmb-inner" [ngStyle]="{
+  marginLeft: x+'px',
+  width: width+'px'
+}">
+    <div class="hmb-column font-300 font-14_16 font-main_2 " *ngFor="let item of menuList">
+      <span class="hmb-header font-500 font-16_24 {{item.header === 'none' ? 'opacity-0' : ''}}">{{item.header}}</span>
+      <span class="hmb-item font-300 font-16_24" *ngFor="let itemSec of item.menuList">
+        {{itemSec.header}}
+      </span>
+    </div>
+  </div>
+</div>

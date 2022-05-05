@@ -1,0 +1,36 @@
+@import "~assets/scss/variables";
+
+html {
+  overflow-y: auto;
+  overflow-x: auto;
+  @media screen and (max-width: $width){
+    // 20px - scroll width
+    width: calc($width + 20px);
+  }
+}
+
+body {
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  display: table;
+  flex-direction: column;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.page > * {
+  flex: none;
+}
+
+main {
+  width: 100%;
+  max-width: $width;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,6 @@
+<app-tabs-sec [tabs]="getTabsListOfKaseMembers()" [paddingTop]="'0'"></app-tabs-sec>
+<app-table-icons [columns]="getMembersCols()"
+                 [values]="getMembersValues().records"
+                 [columnsSettings]="getMembersColsSettings()"
+                 [valuesSettings]="getMembersValueSetting()"
+></app-table-icons>

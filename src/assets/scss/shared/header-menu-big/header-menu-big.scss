@@ -1,0 +1,26 @@
+.header-menu-big {
+  position: fixed;
+  z-index: 9999;
+  top: 9999px;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  padding: 8px 0 30px;
+  border-radius: 0 0 4px 4px;
+  .hmb-inner {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    .hmb-column {
+      display: flex;
+      flex-direction: column;
+      .hmb-header {
+        padding: 8px 0;
+      }
+
+      .hmb-item {
+        padding: 5px 0;
+      }
+    }
+  }
+}

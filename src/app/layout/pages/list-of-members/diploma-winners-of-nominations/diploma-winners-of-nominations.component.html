@@ -1,0 +1,8 @@
+<app-prospectus [text]="false" [paddingTop]="'0'"></app-prospectus>
+<div class="diploma-winners border-width-1111 border-main_1 radius-4" *ngFor="let diploma of getDiplomaValues()">
+  <span class="font-500 font-28_33">{{diploma.header}}</span>
+  <div class="dw-info font-300 font-16_24" *ngFor="let item of diploma.items">
+    <span class="font-main_2">{{item.header}}</span>
+    <a class="font-sec_3" [href]="item.link">{{item.content}}</a>
+  </div>
+</div>

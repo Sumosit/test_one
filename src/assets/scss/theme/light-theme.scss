@@ -1,0 +1,317 @@
+$main-1: '';
+
+.theme-light {
+  $main-1: #038726;
+  $main-2: #1E212B;
+  $main-3: #696969;
+  $main-4: #F8F9FA;
+  $main-5: #FFFFFF;
+  $main-5_30per: rgba(255, 255, 255, 0.3);
+  $sec-1: #038726;
+  $sec-2: #FF2E24;
+  $sec-3: #1666BC;
+  $sec-4: #45464F;
+  $sec-5: #D1D1D1;
+  $misc-5: #F3F4F5;
+  $border-middle_80per: #D1D1D1;
+
+  $box-shadow_1: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);
+
+  $footer-license: rgba(255, 255, 255, 0.7);
+
+  .font-main_1, .font-main_1 * {
+    color: $main-1;
+  }
+
+  .bg-main-1 {
+    background: $main-1;
+  }
+
+  .border-main_1 {
+    border-style: solid;
+    border-color: $main-1;
+  }
+
+  .text-dec-main_1 {
+    text-decoration: underline;
+    text-decoration-color: $main-1;
+  }
+
+  .block-main_1 {
+    color: $main-1;
+    border-style: solid;
+    border-color: $main-1;
+  }
+
+  .font-main_2, .font-main_2 * {
+    color: $main-2;
+  }
+
+  .font-main-3 {
+    color: $main-3;
+  }
+
+  .font-main-4 {
+    color: $main-4;
+  }
+
+  .font-main-4-80per {
+    color: rgba(248, 249, 250, 0.8);
+  }
+
+  .font-main-5, .font-main-5 * {
+    color: $main-5;
+  }
+
+  .font-main-5_30per {
+    color: $main-5;
+  }
+
+  .bg-main_2_005 {
+    background: rgba($main-2, 0.05);
+  }
+
+  .bg-main_3 {
+    background: $main-3;
+  }
+
+  .bg-main_4 {
+    background: $main-4;
+  }
+
+  .bg-main_5 {
+    background: $main-5;
+  }
+
+  .bg-main-5_30per {
+    background: $main-5_30per;
+  }
+
+  // sec
+  .font-sec_1 {
+    color: $sec-1;
+  }
+
+  .font-sec_2 {
+    color: $sec-2;
+  }
+  .block-sec_2 {
+    span {
+      color: $sec-2;
+    }
+
+    svg {
+      use {
+        fill: $sec-2;
+      }
+    }
+  }
+
+  .font-sec_3 {
+    color: $sec-3;
+  }
+
+  .svg-sec_3 {
+      fill: $sec-3;
+  }
+
+  .bg-sec_4 {
+    background: $sec-4;
+  }
+
+  .font-sec_5 {
+    color: $sec-5;
+  }
+
+  .border-sec_5 {
+    border-color: $sec-5;
+  }
+
+  .border-sec_5_80per {
+    border-color: rgba(209, 209, 209, 0.8);
+  }
+
+  .bg-misc-5 {
+    background: $misc-5;
+  }
+
+  .svg-main_3 {
+    fill: $main-3;
+  }
+
+  .svg-main_2 {
+    path {
+      fill: $main-2;
+    }
+  }
+
+  .svgs-main_5 {
+    use {
+      fill: $main-5;
+    }
+  }
+
+  .svgs-sec_1 {
+    svg {
+      path {
+        fill: $sec-1;
+      }
+    }
+  }
+
+  .svgs-sec_2 {
+    svg {
+      path {
+        fill: $sec-2;
+      }
+    }
+  }
+
+  // borders
+  .border-sec_5 {
+    border-style: solid;
+    border-color: $sec-5;
+  }
+
+  .border-sec_5_80per {
+    border-style: solid;
+    border-color: $border-middle_80per;
+  }
+  .svgs-accent {
+    path {
+      fill: $main-1;
+    }
+  }
+
+  .line-bg {
+    background: $main-3;
+  }
+
+  .table-zebra {
+
+    thead {
+      background: $main-5;
+      color: $main-3;
+      border-bottom: 1px solid $sec-5;
+    }
+
+    thead {
+      tr {
+        th {
+          background: $main-5;
+        }
+      }
+    }
+
+    tbody {
+      color: $main-2;
+
+      tr {
+        &:nth-child(odd) {
+          background: $misc-5;
+        }
+
+        &:nth-child(even) {
+          background: $main-5;
+        }
+      }
+    }
+  }
+
+  .table-news, .table-news table {
+    border-collapse: collapse;
+
+    tbody {
+      tr {
+        td {
+          border-bottom: 1px solid $sec-5;
+
+          &:first-child {
+            color: $main-3;
+          }
+
+          &:last-child {
+            color: $main-2;
+          }
+
+          &:last-child {
+            td {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // box-shadow
+  .modal-drop_shadow {
+    filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.1));
+  }
+
+  .box-shadow_1 {
+    box-shadow: $box-shadow_1;
+  }
+
+  // header
+  header {
+    -webkit-box-shadow: 0px 6px 14px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 6px 14px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 6px 14px 0px rgba(34, 60, 80, 0.2);
+  }
+
+
+  .footer-license {
+    color: $footer-license;
+  }
+
+  // inputs-color
+  .input-field-medium, .input-field-big {
+    border: 1px solid $sec-5;
+
+    input {
+      border: none;
+      color: $main-2;
+
+      &::placeholder {
+        color: $main-3;
+      }
+    }
+  }
+
+  // filter-button
+  .primary-button {
+    border: 1px solid $main-1;
+    background: $main-1;
+
+    svg {
+      use {
+        fill: $main-5;
+      }
+    }
+
+    span {
+      color: $main-5;
+    }
+
+    &:hover {
+      background: $main-5;
+
+      svg {
+        use {
+          fill: $main-1;
+        }
+      }
+
+      span {
+        color: $main-1;
+      }
+    }
+  }
+
+
+  // mat-menu
+  .cdk-overlay-pane {
+    border: 1px solid $sec-5;
+  }
+}

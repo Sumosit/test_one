@@ -1,0 +1,56 @@
+<div class="table-body box-shadow_1">
+  <table class="table-zebra">
+    <thead class="font-300 font-12_20">
+    <tr>
+      <th *ngFor="let col of columns; index as i"
+          class="{{col.name}}"
+          [ngStyle]="{
+          'text-align': columnsSettings[i]?.textAlign,
+          'width': columnsSettings[i]?.width
+          }"
+      >
+        <div [ngClass]="{'sub-header': columnsSettings[i].subHeader}">
+          <ng-container *ngIf="columnsSettings[i].subHeader">
+          <span *ngFor="let sHeader of columnsSettings[i].subHeader"
+          [ngClass]="{
+          'opacity-0': columnsSettings[i].subHeader && columnsSettings[i].subHeader[0] === 'none'
+          }"
+          >
+            {{sHeader}}
+          </span>
+          </ng-container>
+          <span>{{col?.name}}</span>
+        </div>
+      </th>
+    </tr>
+    </thead>
+    <tbody class="font-300 font-16_24">
+    <tr *ngFor="let value of values; index as i">
+      <td *ngFor="let field of getNumberOfProperties(value); index as j"
+          [ngStyle]="{
+          'text-align': valuesSettings[j]?.textAlign,
+          'width': valuesSettings[j]?.width,
+          'color': valuesSettings[j]?.color
+          }">
+        <div class="block-span-svg-gap_8" *ngIf="valuesSettings[j].type === 'company'">
+          <img src="assets/images/const-svgs/companies-logo/kaspi-icon.svg" alt="">
+          {{value[columns[j].field]}}
+        </div>
+        <div class="block-span-svg-gap_8" *ngIf="valuesSettings[j].type === 'globe-icon'">
+          <img [src]="'assets/images/const-svgs/companies-logo/'+valuesSettings[j].type+'.svg'" alt="">
+          <a class="font-sec_3" [href]="value[columns[j].field]">{{value[columns[j].field]}}</a>
+        </div>
+        <div class="row-cc" *ngIf="valuesSettings[j].type === 'custom' && value[columns[j].field] === true">
+          <app-svg-icon class="svg-main_3"
+                        [iconName]="'check2-circle'"
+                        [width]="'20'"
+                        [height]="'20'">
+          </app-svg-icon>
+        </div>
+        <span *ngIf="valuesSettings[j].type === 'text'">{{value[columns[j].field]}}</span>
+        <a class="font-sec_3" *ngIf="valuesSettings[j].type === 'href'"
+           [href]="value[columns[j].field]">{{value[columns[j].field]}}</a>
+    </tr>
+    </tbody>
+  </table>
+</div>

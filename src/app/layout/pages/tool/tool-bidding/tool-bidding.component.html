@@ -1,0 +1,11 @@
+<main id="main" class="tool-bidding">
+  <div class="header-mt_30">
+    <span class="font-700 font-28_40 font-main_2">Торги</span>
+  </div>
+  <app-tabs-sec [tabs]="toolBiddingService.tabs"></app-tabs-sec>
+  <app-table [columns]="toolBiddingService.summaryDataCols" [values]="toolBiddingService.summaryDataValues"></app-table>
+  <app-tabs-sec [tabs]="toolBiddingService.tabsSec"></app-tabs-sec>
+  <app-tradingview></app-tradingview>
+  <app-table-news [values]="toolBiddingService.tableNewsValues"></app-table-news>
+  <app-actual-information></app-actual-information>
+</main>

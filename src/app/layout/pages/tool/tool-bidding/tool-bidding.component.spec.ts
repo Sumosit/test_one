@@ -1,0 +1,29 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { ToolBiddingComponent } from './tool-bidding.component';
+import {RouterTestingModule} from "@angular/router/testing";
+import {CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
+
+describe('ToolBiddingComponent', () => {
+  let component: ToolBiddingComponent;
+  let fixture: ComponentFixture<ToolBiddingComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
+      declarations: [ ToolBiddingComponent ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    })
+    .compileComponents();
+  });
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(ToolBiddingComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

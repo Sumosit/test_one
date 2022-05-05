@@ -1,0 +1,17 @@
+.diploma-winners {
+  padding: 24px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+
+  .dw-info {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+
+    a {
+      margin-top: 4px;
+    }
+  }
+}
+

@@ -1,0 +1,35 @@
+$medium_height: 36px;
+$big_height: 44px;
+
+input {
+  width: 100%;
+  background: none;
+}
+
+.input-width {
+  width: 400px;
+}
+
+.input-field-medium {
+  height: $medium_height;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .if-icon_left {
+    flex: none;
+    margin: 0 8px 0 20px;
+  }
+}
+
+.input-field-big {
+  height: $big_height;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .if-icon_left {
+    flex: none;
+    margin: 0 8px 0 20px;
+  }
+}

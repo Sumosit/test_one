@@ -1,0 +1,18 @@
+.header-menu-small {
+  position: fixed;
+  top: 9999px;
+  left: 9999px;
+  width: fit-content;
+  height: fit-content;
+  padding: 4px 16px;
+  border-radius: 0 0 4px 4px;
+
+  .hms-items {
+    .hms-item {
+      padding: 5px 0;
+    }
+  }
+}
+
+.hms-header {
+}

@@ -1,0 +1,10 @@
+<div class="header-menu-small bg-main_5" [ngStyle]="{
+  top: y+'px',
+  left: x+'px'
+}">
+  <div class="hms-items">
+    <div class="hms-item" *ngFor="let item of menuList">
+      <span class="font-14_16 font-300 pointer" [routerLink]="item.link">{{item.header}}</span>
+    </div>
+  </div>
+</div>

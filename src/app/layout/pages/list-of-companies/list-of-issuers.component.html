@@ -1,0 +1,24 @@
+<div class="list-of-companies">
+  <main class="loc-header">
+    <span class="font-40_48 font-900">Список эмитентов</span>
+  </main>
+  <app-tabs [tabs]="listOfCompaniesService.tabs"
+            (currentTab)="getEmitCurrentTab($event)"
+  ></app-tabs>
+  <main>
+    <div class="loc-input-field-big input-field-big input-width">
+      <app-svg-icon class="if-icon_left" [width]="'20'" [height]="'20'"
+                    [iconName]="'search-icon'">
+      </app-svg-icon>
+      <input [(ngModel)]="searchCode" placeholder="Поиск по коду ценной бумаги">
+    </div>
+    <div>
+      <app-table-icons [columns]="listOfCompaniesService.officialListCols"
+                       [values]="getOfficialListValues()"
+                       [columnsSettings]="listOfCompaniesService.tableColsSettings"
+                       [valuesSettings]="listOfCompaniesService.tableValuesSettings"
+      ></app-table-icons>
+    </div>
+    <app-actual-information></app-actual-information>
+  </main>
+</div>

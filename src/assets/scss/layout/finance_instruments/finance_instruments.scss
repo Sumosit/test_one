@@ -1,0 +1,42 @@
+.finance_instruments {
+  display: flex;
+  flex-direction: column;
+
+  .fi-header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fih-selected-inst {
+    margin-top: 30px;
+    padding-left: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .fihsi-button {
+      margin-left: auto;
+    }
+  }
+
+  .input-field-big {
+    margin-top: 30px;
+  }
+
+  .fi-table_1, .fi-table_2 {
+    .fi-table-header {
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: row;
+      span {
+        &:nth-child(2) {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+
+  .fi-table_2 {
+    padding-bottom: 60px;
+  }
+}

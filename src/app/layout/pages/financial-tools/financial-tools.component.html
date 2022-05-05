@@ -1,0 +1,38 @@
+<main>
+  <app-path-tree [pathTree]="pathTree"></app-path-tree>
+  <div class="finance_instruments">
+    <div class="fi-header">
+      <span class="font-700 font-40_56 font-main_2">Финансовые инструменты</span>
+      <span class="font-300 font-16_24 font-main_2">Общее количество: инструментов – 1259 , эмитентов – 220</span>
+      <div class="input-field-big">
+        <app-svg-icon class="if-icon_left" [width]="'20'" [height]="'20'"
+                      [iconName]="'search-icon'">
+        </app-svg-icon>
+        <input [(ngModel)]="searchCode" placeholder="Поиск по коду ценной бумаги">
+      </div>
+      <div class="fih-selected-inst">
+      <span class=" font-300 font-16_24">Выбрано всего: инструментов –
+        <span class="font-500">900</span> , эмитентов –
+        <span class="font-500">180</span>
+      </span>
+        <app-filter-button class="fihsi-button"
+                           (filterValues)="getEmitFilterValues($event)"
+        ></app-filter-button>
+      </div>
+      <div class="fi-table_1" *ngFor="let filterValue of filterValues">
+        <ng-container *ngFor="let type of filterValue.types">
+          <ng-container *ngFor="let category of type.categories">
+            <ng-container *ngIf="category.active">
+            <div class="fi-table-header header-mt_30">
+              <span class="font-700 font-20_28 font-main-2">{{category.headerView}}</span>
+              <span class="font-300 font-14_22 font-main-2">инструментов – 365 , эмитентов – 110</span>
+            </div>
+            <app-table [columns]="promotionCols" [values]="getTableValues(category.headerView)"></app-table>
+            </ng-container>
+          </ng-container>
+        </ng-container>
+      </div>
+      <app-actual-information></app-actual-information>
+    </div>
+  </div>
+</main>

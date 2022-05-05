@@ -1,0 +1,88 @@
+// font-size, line-height
+.font-40_56 {
+  font-size: 40px;
+  line-height: 56px;
+}
+
+.font-28_40 {
+  font-size: 28px;
+  line-height: 40px;
+}
+.font-28_33 {
+  font-size: 28px;
+  line-height: 33px;
+}
+
+.font-20_28 {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.font-18_28 {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.font-10_16, .font-10_16 * {
+  font-size: 10px;
+  line-height: 16px;
+}
+
+.font-16_24, .font-16_24 > * {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.font-12_20, .font-12_20 > * {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.font-12_16 {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.font-14_16 {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.font-14_22 {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.font-14_24 {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.font-24_24 {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.font-40_48, .font-40_48 * {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+
+// font decorations
+.font-underline {
+  text-decoration: underline;
+}
+
+.font-capitalize {
+  text-transform: capitalize;
+}
+
+.font-uppercase {
+  text-transform: uppercase;
+}
+
+.font-nowrap {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

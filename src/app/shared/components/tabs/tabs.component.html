@@ -1,0 +1,20 @@
+<div class="tabs">
+  <div class="left border-main_1"></div>
+  <div class="tabs-field">
+    <div class="tab border-main_1"
+         (click)="clickTab(tab)"
+         [ngClass]="{
+         'tab-on font-700': tab.active,
+         'tab-off font-300': !tab.active
+         }"
+         *ngFor="let tab of tabs">
+      <img *ngIf="tab.active" src="../../../../assets/images/const-svgs/tabs/corner-left.svg" alt="">
+      <div class="row-c {{tab.active ? 'bg-main-1 font-main-5 font-700' : 'font-main_2 font-300'}}">
+        <span class="font-18_28">{{tab.header}}</span>
+      </div>
+      <img *ngIf="tab.active" class="corner-right" src="../../../../assets/images/const-svgs/tabs/corner-left.svg" alt="">
+    </div>
+    <div class="tab-empty border-main_1"></div>
+  </div>
+  <div class="right border-main_1"></div>
+</div>

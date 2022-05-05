@@ -1,0 +1,14 @@
+<div class="list-of-companies">
+  <main class="loc-header">
+    <span class="font-40_48 font-900">Члены биржи</span>
+  </main>
+  <app-tabs [tabs]="getTabs()"
+            (currentTab)="getEmitCurrentTab($event)"
+  ></app-tabs>
+  <main>
+    <app-list-of-kase-members *ngIf="getTabs()[0].active"></app-list-of-kase-members>
+    <app-activity-ranking *ngIf="getTabs()[1].active"></app-activity-ranking>
+    <app-diploma-winners-of-nominations *ngIf="getTabs()[2].active"></app-diploma-winners-of-nominations>
+    <app-actual-information></app-actual-information>
+  </main>
+</div>

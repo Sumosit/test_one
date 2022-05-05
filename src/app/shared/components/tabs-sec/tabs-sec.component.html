@@ -1,0 +1,16 @@
+<div id="tabs-sec" #tabsSec class="tabs font-16_24"
+     [ngStyle]="{
+       'padding-top': paddingTop + 'px',
+       'padding-bottom': paddingBottom + 'px'
+       }">
+  <div class="tab-on font-main_2"
+       [id]="'tabs-sec' + tab.header"
+       (click)="clickTab(tab)"
+       [ngClass]="{
+       'tab-on font-700 border-main_1': tab.active,
+       'tab-off font-300 border-sec_5': !tab.active
+       }"
+       *ngFor="let tab of tabs">
+    <span>{{tab.header}}</span>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="prospectus"
+     [ngStyle]="{
+       'padding-top': paddingTop + 'px'
+       }">
+  <span *ngIf="text" class="font-700 font-28_40 font-main_2">Проспекты</span>
+  <div class="ps-dates">
+    <div class="ps-arrow-bg ps-arrow-left rotate-180 bg-main_2_005" (click)="clickLeft()">
+      <app-svg-icon class="svg-main_3" [iconName]="'arrow_right-light'"
+                    [height]="'20'"
+                    [width]="'20'"
+      ></app-svg-icon>
+    </div>
+    <app-tabs-sec [tabs]="tabs"
+                  [paddingTop]="'0'"
+                  [paddingBottom]="'0'"
+                  (currentTab)="getEmitCurrentTab($event)"
+    ></app-tabs-sec>
+    <div class="ps-arrow-bg ps-arrow-right bg-main_2_005" (click)="clickRight()">
+      <app-svg-icon class="svg-main_3" [iconName]="'arrow_right-light'"
+                    [height]="'20'"
+                    [width]="'20'"
+      ></app-svg-icon>
+    </div>
+  </div>
+</div>

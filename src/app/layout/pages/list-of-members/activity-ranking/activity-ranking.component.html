@@ -1,0 +1,16 @@
+<div class="font-300 font-16_24">
+  <span>
+    Участникам торгов фондового и валютного рынков предоставляется возможность осуществлять операции в режиме основных торгов, подключая собственные внешние программно-технические средства с использованием протокола FIX версии 4.4.
+  </span>
+  <br>
+  <br>
+  <span>
+    Информация о FIX-протоколе доступна по адресу: <a href="#" class="font-main_1">http://www.fixprotocol.org</a>
+  </span>
+</div>
+<app-tabs-sec [tabs]="getTabsActivityRanking()"></app-tabs-sec>
+<app-table-icons [columns]="getActivityCols()"
+                 [values]="getActivityValues()"
+                 [columnsSettings]="getActivityColsSettings()"
+                 [valuesSettings]="getActivityValueSetting()"
+                 ></app-table-icons>

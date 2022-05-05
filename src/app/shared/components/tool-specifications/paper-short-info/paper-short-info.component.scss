@@ -1,0 +1,66 @@
+.paper-short-info {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: row;
+  .psi-left {
+    display: flex;
+    flex-direction: column;
+    .psil-link {
+      margin-top: 8px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .psil-promotion {
+      margin-top: 8px;
+    }
+  }
+
+  .psi-right {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    .button-p0_30 {
+      margin-left: auto;
+    }
+    .psir-condition {
+      margin-top: 27px;
+      margin-left: auto;
+      display: flex;
+      flex-direction: row;
+      .psirc-item {
+        padding: 0 15px;
+        border-width: 0;
+        border-right-width: 1px;
+        border-left-width: 1px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        &:first-child {
+          padding-right: 15px;
+          border-right-width: 1px;
+          border-left-width: 0;
+        }
+        &:last-child {
+          padding-left: 15px;
+          border-right-width: 0;
+          border-left-width: 1px;
+        }
+
+        .psirci-values {
+          margin-left: auto;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 8px;
+          span {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+    }
+  }
+}
